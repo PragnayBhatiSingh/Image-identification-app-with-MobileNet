@@ -1,0 +1,54 @@
+<html>
+
+<head>
+  <title>Image Identification App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <center>
+    <div class="col-xs-12 header_div">
+      <h2>
+        Image Identification App
+        <img id="logo" src="giphy.gif">
+      </h2>
+    </div>
+
+    <div class="col-xs-12 col-sm-6 picture_div">
+      <label>Camera -</label>
+      <div id="camera"></div>
+      <button onclick="take_snapshot()" class="btn btn-info" style="box-shadow: 5px 5px 1px rgb(11, 137, 179);">Take
+        Snapshot</button>
+    </div>
+    <div class="col-xs-12 col-sm-6 picture_div">
+      <label>Snapshot -</label>
+      <div id="result"></div>
+      <button onclick="check()" class="btn btn-success" style="box-shadow: 5px 5px 1px green;">Identify
+        Image</button>
+    </div>
+  </center>
+  <div class="col-xs-12 footer_div">
+    <h4 class="col-xs-12 col-sm-6">
+      <img id="verified" src="facescan.gif">
+      <span id="object_name"></span>
+    </h4>
+  </div>
+<br><br>
+  <div class="footer">
+    Developed by Pragnay Pratap Singh
+  </div>
+
+
+  <script src="main.js"></script>
+</body>
+
+</html>
